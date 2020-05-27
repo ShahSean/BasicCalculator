@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+.calc-container{
+
+    width: 400px;
+    height: 593px;
+    border: 4px;
+    border-style: solid;
+    border-radius: 2%;
+    /* border-color: blueviolet; */
+}
+.result-box{
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    height: 17%;
+    background-color: black;
+    color: white;
+    min-height: 60px;
+    justify-content: flex-end;
+    align-content: flex-start;
+    padding: 20px;
+}
+
+.num-pad{
+    font-weight: 200;
+    font-size: x-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+button:hover{
+    background-color: rgb(170, 124, 170);
+}
+.reg-btn{
+   background-color:#b4b2b2;
+   min-height: 90px;
+   height: 136%;
+   min-width: 98px;
+   width: 48.5%;
+   border-width: 1.5px;
+   border-style: solid;
+   border-radius: 2.5%;
+   border-color: black;
+   vertical-align: middle;
+   text-align: center;
+}
+
+.double-btn{
+    min-width: 196px;
+}
+
+.triple-btn{
+    min-width: 294px;
+}
+
+.op-btn{
+    background-color: rgb(202, 129, 64);
+}
+
+ /* How can I get rid of the repetetivness in the following rows ? 
+    How to edit the the numbers font ?
+    How to use proportional (%) for height and width*/
+.first-row{
+    display: flex;
+    background-color: #a5a2a2;
+    justify-content: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+}
+.second-row{
+    display: flex;
+    background-color:#a5a2a2;
+    border-style: solid;
+    border: 2px;
+    border-color: pink;
+}
+.third-row{
+    display: flex;
+    background-color:#a5a2a2;
+    border-style: solid;
+    border: 2px;
+    border-color: blue;
+}
+.forth-row{
+    display: flex;
+    background-color:#a5a2a2;
+    border-style: solid;
+    border: 2px;
+    border-color: red;
+}
+.fifth-row{
+    display: flex;
+    background-color:#a5a2a2;
+    border-style: solid;
+    border: 2px;
+    border-color: red;
+}

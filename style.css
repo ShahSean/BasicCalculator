@@ -15,29 +15,21 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     height: 17%;
-    background-color: black;
-    color: white;
+    background-color: rgb(199, 199, 199);
+    color: red;
     min-height: 60px;
     justify-content: flex-end;
     align-content: flex-start;
     padding: 20px;
 }
 
-.num-pad{
-    font-weight: 200;
-    font-size: x-large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 400;
-    font-weight: bolder;
-    font-size: 1.5em;
-}
 button:hover{
     background-color: rgb(170, 124, 170);
 }
 .reg-btn{
    background-color:#b4b2b2;
-   min-height: 90px;
-   height: 136%;
+   min-height: 96.5px;
+   height: 138%;
    min-width: 98px;
    width: 48.5%;
    border-width: 1.5px;
@@ -46,6 +38,11 @@ button:hover{
    border-color: black;
    vertical-align: middle;
    text-align: center;
+   font-size: xx-large;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
 }
 
 .double-btn{
@@ -57,12 +54,29 @@ button:hover{
 }
 
 .op-btn{
-    background-color: rgb(202, 129, 64);
+   background-color: rgb(202, 129, 64);
+   min-height: 96.5px;
+   height: 138%;
+   min-width: 98px;
+   width: 48.5%;
+   border-width: 1.5px;
+   border-style: solid;
+   border-radius: 2.5%;
+   border-color: black;
+   vertical-align: middle;
+   text-align: center;
+   font-size: xx-large;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+ 
 }
 
  /* How can I get rid of the repetetivness in the following rows ? 
     How to edit the the numbers font ?
     How to use proportional (%) for height and width*/
+    
 .first-row{
     display: flex;
     background-color: #a5a2a2;

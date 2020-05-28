@@ -1,10 +1,7 @@
-/*
-    make an array and get the each btn click and then do operations on it
-*/
 
 let totalCounter = 0;
 let buffer = "0";
-let prevOperator;
+let prevOperator = null;
 const screen = document.querySelector(".result-box")
 
 document.querySelector('.num-pad').addEventListener("click", function(event){
@@ -18,52 +15,73 @@ function btnClick(value){
     else{
         numberHandler(value);
     }
+    rerender();
 }
 
 function symbolHandler(value){
-
-
-
-}
+    switch(value){
+        case 'C':
+            buffer = "0";
+            totalCounter = 0;
+            prevOperator = null;
+            console.log("in C");
+            break; 
+        case "=": 
+            console.log("in equal");
+            if (prevOperator === null){
+                return;
+            }  
+            flushOp(parseInt(buffer));
+            prevOperator = null;
+            buffer = "" + totalCounter;
+            totalCounter = 0;
+            break;
+        case "←": 
+           if(buffer.length === 1){
+               console.log("here");
+               buffer = "0";
+           }else {
+               console.log("in backspace");
+               buffer = buffer.substring(0, buffer.length-1);
+           }
+           break;
+        default:
+            handleMath(value);
+            break; 
+        }
+}   
 
 function numberHandler(value){
-
     if (buffer === "0"){
         buffer = value;
     }else{
         buffer += value;
+    }    
+}
+
+function handleMath(value){
+    const intBuffer = parseInt(buffer);
+    if (totalCounter === 0){
+        totalCounter = intBuffer;
+    }else{
+        flushOp(intBuffer);
     }
-    rerender();
+    prevOperator = value;
+    buffer = "0";
+}
+
+function flushOp(intBuffer){
+    if(prevOperator === "+"){
+        totalCounter += intBuffer; 
+    }else if(prevOperator === "-"){
+        totalCounter -= intBuffer;
+    }else if(prevOperator === "×"){
+        totalCounter *= intBuffer;
+    }else if(prevOperator === "÷"){
+        totalCounter /= intBuffer;
+    }
 }
 
 function rerender(){
     screen.innerText = buffer; 
 }
-
-
-// const numBtn = document.querySelector(".reg-btn");
-// const firstArr = [];
-// const optBtn = document.querySelector(".op-btn");
-// console.log(`This is opBtn: ${optBtn}`);
-// if(numBtn){
-//     numBtn.addEventListener("click", myfunction(event));
-// }
-// else if(optBtn){
-//     optBtn.addEventListener("click", function(){
-//         console.log(optBtn);
-//     })
-// }
-
-// function myfunction(){
-//     firstArr.push(event.target.innerHTML);
-//     document.getElementsByClassName('.result-box').innerHTML = console.log(`${typeof(parseInt(event.target.innerText))}`);
-//     firstArr.forEach(console.log);
-//     // foreachconsole.log(parseInt(firstArr));
-
-// }
-
-
-// // function add('reg-btn', 'opt-btn', 'reg-btn'){
-// //     myfunction()
-
-// // }
